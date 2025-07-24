@@ -6,6 +6,12 @@
     <title>History</title>
 </head>
 <body>
-    <h1>History</h1>
+    <h2>Search History</h2>
+    <ul>
+    {% for h in history %}
+    <li>{{ h.search_timestamp }} - {{ h.continent }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'continent_view' %}">Back</a>
 </body>
 </html>

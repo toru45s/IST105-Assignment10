@@ -6,6 +6,18 @@
     <title>Search Results</title>
 </head>
 <body>
-    <h1>Search Results</h1>
+    <h2>Results</h2>
+    <table>
+    <tr><th>Country</th><th>Capital</th><th>Population</th><th>Temp (°C)</th><th>Weather</th></tr>
+    {% for r in results %}
+    <tr>
+      <td>{{ r.country }}</td><td>{{ r.capital }}</td><td>{{ r.population }}</td>
+      <td>{{ r.temperature_celsius }}</td><td>{{ r.weather_description }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    
+    <a href="{% url 'continent_view' %}">Back</a>
+    <a href="{% url 'history_view' %}">History</a>
 </body>
 </html>
