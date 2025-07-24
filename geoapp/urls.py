@@ -19,5 +19,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.continent_view, name='continent_view'),
+    path('history/', views.history_view, name='history_view'),
 ]
